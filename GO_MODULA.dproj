@@ -77,7 +77,7 @@
         <DCC_RemoteDebug>true</DCC_RemoteDebug>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_1_Win32)'!=''">
-        <DCC_UnitSearchPath>C:\GestionaleOpen\go_1010\src_101002;C:\GestionaleOpen\go_1010\src_dcu;$(DCC_UnitSearchPath)</DCC_UnitSearchPath>
+        <DCC_UnitSearchPath>C:\GestionaleOpen\go_1011\src;C:\GestionaleOpen\go_1011\src\klib;C:\GestionaleOpen\go_1011\src_dcu;$(DCC_UnitSearchPath)</DCC_UnitSearchPath>
         <Debugger_RunParams>&lt;utente&gt;GO&lt;/utente&gt; &lt;salta_login&gt;si&lt;/salta_login&gt; &lt;operazione&gt;GIA&lt;/operazione&gt; &lt;attesa&gt;1&lt;/attesa&gt; &lt;password&gt;GO&lt;/password&gt;</Debugger_RunParams>
         <VerInfo_MinorVer>3</VerInfo_MinorVer>
         <VerInfo_MajorVer>10</VerInfo_MajorVer>
@@ -108,23 +108,23 @@
         <DelphiCompile Include="$(MainSource)">
             <MainSource>MainSource</MainSource>
         </DelphiCompile>
-        <RcCompile Include="..\..\..\go_1010\src_101002\ZZVERSIONE_GO_EXE.rc">
+        <RcCompile Include="..\..\..\go_1011\src\ZZVERSIONE_GO_EXE.rc">
             <Form>ZZVERSIONE_GO_EXE.res</Form>
         </RcCompile>
-        <DCCReference Include="..\..\..\go_1010\src_101002\DMARC.pas">
+        <DCCReference Include="..\..\..\go_1011\src\DMARC.pas">
             <Form>ARC</Form>
             <DesignClass>TDataModule</DesignClass>
         </DCCReference>
-        <DCCReference Include="..\..\..\go_1010\src_101002\GGLOGIN.pas">
+        <DCCReference Include="..\..\..\go_1011\src\GGLOGIN.pas">
             <Form>LOGIN</Form>
         </DCCReference>
-        <DCCReference Include="..\..\..\go_1010\src_101002\GGBASE.pas">
+        <DCCReference Include="..\..\..\go_1011\src\GGBASE.pas">
             <Form>BASE</Form>
         </DCCReference>
-        <DCCReference Include="..\..\..\go_1010\src_101002\GGFORMBASE.pas">
+        <DCCReference Include="..\..\..\go_1011\src\GGFORMBASE.pas">
             <Form>FORMBASE</Form>
         </DCCReference>
-        <DCCReference Include="..\..\..\go_1010\src_101002\GGSTAMPA.pas">
+        <DCCReference Include="..\..\..\go_1011\src\GGSTAMPA.pas">
             <Form>STAMPA</Form>
         </DCCReference>
         <DCCReference Include="DMCLOUD.pas">
@@ -171,27 +171,12 @@
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
-                <DeployClass Name="DependencyModule">
-                    <Platform Name="Win32">
-                        <Operation>0</Operation>
-                        <Extensions>.dll;.bpl</Extensions>
-                    </Platform>
+                <DeployClass Name="ProjectiOSDeviceResourceRules">
                     <Platform Name="iOSDevice64">
                         <Operation>1</Operation>
-                        <Extensions>.dylib</Extensions>
-                    </Platform>
-                    <Platform Name="OSX32">
-                        <RemoteDir>Contents\MacOS</RemoteDir>
-                        <Operation>1</Operation>
-                        <Extensions>.dylib</Extensions>
                     </Platform>
                     <Platform Name="iOSDevice32">
                         <Operation>1</Operation>
-                        <Extensions>.dylib</Extensions>
-                    </Platform>
-                    <Platform Name="iOSSimulator">
-                        <Operation>1</Operation>
-                        <Extensions>.dylib</Extensions>
                     </Platform>
                 </DeployClass>
                 <DeployClass Name="ProjectOSXResource">
@@ -545,12 +530,27 @@
                         <Operation>1</Operation>
                     </Platform>
                 </DeployClass>
-                <DeployClass Name="ProjectiOSDeviceResourceRules">
+                <DeployClass Name="DependencyModule">
+                    <Platform Name="Win32">
+                        <Operation>0</Operation>
+                        <Extensions>.dll;.bpl</Extensions>
+                    </Platform>
                     <Platform Name="iOSDevice64">
                         <Operation>1</Operation>
+                        <Extensions>.dylib</Extensions>
+                    </Platform>
+                    <Platform Name="OSX32">
+                        <RemoteDir>Contents\MacOS</RemoteDir>
+                        <Operation>1</Operation>
+                        <Extensions>.dylib</Extensions>
                     </Platform>
                     <Platform Name="iOSDevice32">
                         <Operation>1</Operation>
+                        <Extensions>.dylib</Extensions>
+                    </Platform>
+                    <Platform Name="iOSSimulator">
+                        <Operation>1</Operation>
+                        <Extensions>.dylib</Extensions>
                     </Platform>
                 </DeployClass>
                 <ProjectRoot Platform="iOSDevice64" Name="$(PROJECTNAME).app"/>

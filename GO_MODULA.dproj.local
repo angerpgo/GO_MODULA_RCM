@@ -1,2 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<BorlandProject/>
+<BorlandProject>
+  <Transactions>
+    <Transaction>2021/06/30 05:39:35.856,C:\GestionaleOpen\go_1010\src_101002\ZZVERSIONE_GO_EXE.rc=</Transaction>
+  </Transactions>
+</BorlandProject>
